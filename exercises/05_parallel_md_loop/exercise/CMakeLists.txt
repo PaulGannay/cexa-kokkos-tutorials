@@ -1,6 +1,6 @@
 cmake_minimum_required (VERSION 3.22)
 
-project(04ParallelLoopExercise LANGUAGES CXX)
+project(05ParallelLoopMDExercise LANGUAGES CXX)
 
 include(../../../cmake/SetUpKokkos.cmake)
 
