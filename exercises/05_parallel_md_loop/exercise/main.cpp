@@ -25,8 +25,7 @@ int main(int argc, char* argv[]) {
 
         std::cout << " Creation of two 2D view of size " << Nx << " x " << Ny << std::endl;
 
-        Kokkos::View<double**> T("T", Nx, Ny);
-        Kokkos::View<double**> T_new("T_new", Nx, Ny);
+        // ...
 
         // _____________________________________________________
         // Initialize "T_new" field with -1.0
