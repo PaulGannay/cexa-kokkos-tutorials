@@ -12,16 +12,24 @@ In the file `main.cpp`, create two 2D Views `T` and `T_new` of size `Nx` x `Ny` 
 
 Use the scalar fill syntax (`Kokkos::deep_copy`) to initialize `T_new` to `-1.0`.
 
-Replace the 1D `Kokkos::RangePolicy` and the inner `for` loop with a 2D `Kokkos::MDRangePolicy` to initialize `T`.
+Replace the `Kokkos::RangePolicy` with a 2D `Kokkos::MDRangePolicy` to initialize `T` with the formula:
+
+```cpp
+T(i, j) = (i % 2 == 0) ? 2.0 : 1.0;
+```
 
 ## Step 3: Update the Jacobi iteration
 
-Use a 2D `Kokkos::MDRangePolicy` to iterate over the interior points of `T` (excluding the boundaries) and compute `T_new` with the Jacobi formula.
+Replace the `Kokkos::RangePolicy` with a 2D `Kokkos::MDRangePolicy` to iterate over the interior points of `T` (excluding the boundaries) and compute `T_new` with the Jacobi formula:
+
+```cpp
+T_new(i, j) = 0.25 * (T(i-1, j) + T(i+1, j) + T(i, j-1) + T(i, j+1));
+```
 
 ## Step 4: Check the result
 
 Create a mirror View called `T_host_mirror` and copy the data from `T_new` to it.
-Compute the absolute error between `T_host_mirror` and the expected result on the interior points.
+Compute the sum of the absolute errors, the expected value is `1.5` on all interior points.
 
 ## Step 5: Timers
 
@@ -47,3 +55,11 @@ build_openmp/exe05 10240 10240
 
 If you have access to a GPU, compile and run the program with the corresponding backend.
 Compare the times between the two backends.
+
+## Bonus step: Iteration order
+
+By default, `Kokkos::MDRangePolicy` chooses an iteration order suited to the default layout of the execution space.
+
+Modify the Jacobi update to test combinations of `Iterate::Left` and `Iterate::Right`, and compare the timings with a Host backend and a Device backend.
+
+- Which combination is the fastest on each backend?

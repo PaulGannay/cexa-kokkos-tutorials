@@ -21,9 +21,9 @@ int main(int argc, char* argv[]) {
         }
 
         // _____________________________________________________
-        // Create Two 2D view of size Nx x Ny
+        // Create two 2D View of size Nx x Ny
 
-        std::cout << " Creation of two 2D view of size " << Nx << " x " << Ny << std::endl;
+        std::cout << "Creation of two 2D Views of size " << Nx << " x " << Ny << std::endl;
 
         // ...
 
@@ -37,23 +37,20 @@ int main(int argc, char* argv[]) {
 
         Kokkos::parallel_for("Initialization", Kokkos::RangePolicy<>(0, Nx),
         KOKKOS_LAMBDA(const int i) {
-            for (int j = 0; j < Ny; j++) {
-                T(i, j) = (i % 2 == 0) ? 2.0 : 1.0;
-            }
+            // ...
         });
-        Kokkos::fence();
+
+        // ...
 
         // _____________________________________________________
         // Jacobi Update
 
         Kokkos::parallel_for("Jacobi", Kokkos::RangePolicy<>(1, Nx - 1),
         KOKKOS_LAMBDA(const int i) {
-            for (int j = 1; j < Ny - 1; j++) {
-                T_new(i, j) = 0.25 * (T(i - 1, j) + T(i + 1, j) +
-                                      T(i, j - 1) + T(i, j + 1));
-            }
+            // ...
         });
-        Kokkos::fence();
+
+        // ...
 
         // _____________________________________________________
         // Copy the result to a Host accessible View
