@@ -29,7 +29,8 @@ This course is part of the [CExA project](https://cexa-project.github.io/).
 - [Exercise 2: Learn how to use and manage basic Kokkos View](exercises/02_basic_view/README.md)
 - [Exercise 3: Mirror view and deep copy](exercises/03_deep_copy/README.md)
 - [Exercise 4: Parallel Loop](exercises/04_parallel_loop/README.md)
-- [Exercise 5: Parallel Reduce](exercises/05_parallel_reduce/README.md)
+- [Exercise 5: Multidimensional parallel loop](exercises/05_parallel_md_loop/README.md)
+- [Exercise 6: Parallel Reduce](exercises/06_parallel_reduce/README.md)
 - [Exercise 10: Debugging and profiling](exercises/10_profiling/README.md)
 
 ### Projects
