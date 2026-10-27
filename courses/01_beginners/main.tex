@@ -1100,10 +1100,10 @@
                 \item Contains any C++ type (\texttt{int}, \texttt{float}, \texttt{double}, etc)
                 \item Number of dimensions, fixed at compile time (no more than 7)
                 \item Size of each dimension determined at...
-                    \begin{description}[\texttt{[n]}]
-                        \item[\texttt{*}] runtime
-                        \item[\texttt{[n]}] compile time
-                    \end{description}
+                  \begin{description}[\texttt{[n]}]
+                    \item[\texttt{*}] runtime
+                    \item[\texttt{[n]}] compile time
+                  \end{description}
             \end{itemize}
         \end{column}
     \end{columns}
@@ -1333,6 +1333,7 @@
 \begin{frame}[fragile]{Copy and assignation}
     \begin{columns}
         \begin{column}{0.5\linewidth}
+            \vspace{-0.9em}
             \begin{minted}{C++}
                 Kokkos::View<int*[5]> a("a", 10), 
                                       b("b", 15);
@@ -1345,7 +1346,6 @@
 
                 std::cout << a(0, 2) << std::endl;
             \end{minted}
-            \vspace{1em}
         \end{column}
         \begin{column}{0.5\linewidth}
             \structure{Question:} What gets printed?
@@ -1365,7 +1365,7 @@
             \begin{uncoverenv}<1->
                 \begin{minted}{C++}
                     Kokkos::View<int*[5]> a("a", 10),
-                    b("b", 15);
+                                          b("b", 15);
                 \end{minted}
             \end{uncoverenv}
             \vspace{-3.5em}
@@ -1378,6 +1378,7 @@
             \begin{uncoverenv}<3->
                 \begin{minted}{C++}
                     Kokkos::View<int**> c(b);
+
                     a(0, 2) = 1;
                     b(0, 2) = 2;
                     c(0, 2) = 3;
