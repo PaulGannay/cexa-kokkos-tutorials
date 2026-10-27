@@ -29,11 +29,11 @@
      inkscape:document-units="mm"
      inkscape:zoom="3.4019146"
      inkscape:cx="137.86354"
-     inkscape:cy="102.58929"
+     inkscape:cy="102.88324"
      inkscape:window-width="2556"
-     inkscape:window-height="1311"
+     inkscape:window-height="1329"
      inkscape:window-x="0"
-     inkscape:window-y="108"
+     inkscape:window-y="90"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1"
      inkscape:pageshadow="0"
@@ -207,8 +207,8 @@
        x2="133.44421"
        y2="56.687866" />
     <filter
-       style="color-interpolation-filters:sRGB"
-       inkscape:label="Color Shift"
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Opacity"
        id="filter21533"
        x="-0.0089084323"
        y="-0.037118465"
@@ -222,8 +222,81 @@
       <feColorMatrix
          type="saturate"
          values="0.100665"
-         result="color2"
+         result="fbSourceGraphic"
          id="feColorMatrix21531" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix39796" />
+      <feColorMatrix
+         id="feColorMatrix39798"
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 5 -1 "
+         result="colormatrix"
+         in="fbSourceGraphic" />
+      <feComposite
+         in2="colormatrix"
+         id="feComposite39800"
+         operator="arithmetic"
+         k2="0.495137"
+         result="composite" />
+    </filter>
+    <filter
+       inkscape:label="Opacity"
+       style="color-interpolation-filters:sRGB;"
+       id="filter39806"
+       x="0"
+       y="0"
+       width="1"
+       height="1">
+      <feColorMatrix
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 5 -1 "
+         result="colormatrix"
+         id="feColorMatrix39802" />
+      <feComposite
+         in2="colormatrix"
+         operator="arithmetic"
+         k2="0.495137"
+         result="composite"
+         id="feComposite39804" />
+    </filter>
+    <filter
+       inkscape:label="Opacity"
+       style="color-interpolation-filters:sRGB;"
+       id="filter39812"
+       x="0"
+       y="0"
+       width="1"
+       height="1">
+      <feColorMatrix
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 5 -1 "
+         result="colormatrix"
+         id="feColorMatrix39808" />
+      <feComposite
+         in2="colormatrix"
+         operator="arithmetic"
+         k2="0.495137"
+         result="composite"
+         id="feComposite39810" />
+    </filter>
+    <filter
+       inkscape:label="Opacity"
+       style="color-interpolation-filters:sRGB;"
+       id="filter39818"
+       x="0"
+       y="0"
+       width="1"
+       height="1">
+      <feColorMatrix
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 5 -1 "
+         result="colormatrix"
+         id="feColorMatrix39814" />
+      <feComposite
+         in2="colormatrix"
+         operator="arithmetic"
+         k2="0.495137"
+         result="composite"
+         id="feComposite39816" />
     </filter>
   </defs>
   <g
@@ -334,7 +407,7 @@
        ry="0.31614056" />
     <text
        xml:space="preserve"
-       style="font-weight:300;font-size:3.52778px;line-height:106%;font-family:'Clear Sans Light';-inkscape-font-specification:'Clear Sans Light, Light';text-align:center;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.690999"
+       style="font-weight:300;font-size:3.52778px;line-height:106%;font-family:'Clear Sans Light';-inkscape-font-specification:'Clear Sans Light, Light';text-align:center;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.690999;filter:url(#filter39806)"
        x="71.180748"
        y="27.21298"
        id="text3527-5-2"><tspan
@@ -345,7 +418,7 @@
          y="27.21298">50 int</tspan></text>
     <text
        xml:space="preserve"
-       style="font-weight:300;font-size:2.82222px;line-height:106%;font-family:'Clear Sans Light';-inkscape-font-specification:'Clear Sans Light, Light';text-align:center;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.690999"
+       style="font-weight:300;font-size:2.82222px;line-height:106%;font-family:'Clear Sans Light';-inkscape-font-specification:'Clear Sans Light, Light';text-align:center;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.690999;filter:url(#filter39812)"
        x="71.180748"
        y="30.166849"
        id="text3527-5-2-9"><tspan
@@ -473,7 +546,7 @@
        id="path21578" />
     <text
        xml:space="preserve"
-       style="font-weight:300;font-size:2.82222px;line-height:106%;font-family:'Clear Sans Light';-inkscape-font-specification:'Clear Sans Light, Light';text-align:center;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;fill:#ff972c;stroke:#000000;stroke-width:0.690999"
+       style="font-weight:300;font-size:2.82222px;line-height:106%;font-family:'Clear Sans Light';-inkscape-font-specification:'Clear Sans Light, Light';text-align:center;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;fill:#ff972c;stroke:#000000;stroke-width:0.690999;filter:url(#filter39818)"
        x="70.747704"
        y="22.538872"
        id="text3527-0-36"><tspan
